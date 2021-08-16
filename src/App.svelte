@@ -1,9 +1,9 @@
 <script lang="ts">
-  export let name: string;
+  const condition = true;
 </script>
 
 <main>
-  <h1>Hello {name}!</h1>
+  <h1>Hello!</h1>
 </main>
 
 <style>
