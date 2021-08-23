@@ -1,5 +1,5 @@
 <script>
-  export let todos = [];
+  export let todos;
 </script>
 
 {#if !todos.length}
