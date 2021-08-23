@@ -1,20 +1,26 @@
 <script>
-  export let addTodo;
+  import { todos } from "../stores";
 
-  let currentTodo;
+  let value;
 
   const handleSubmit = () => {
-    if (!currentTodo) return;
-    addTodo(currentTodo);
-    currentTodo = "";
+    if (!value) return;
+    todos.addTodo(value);
+    value = "";
   };
   const handleClear = (e) => {
-    if (e.key === "Escape") currentTodo = "";
+    if (e.key === "Escape") value = "";
   };
 </script>
 
 <form on:submit|preventDefault={handleSubmit}>
-  <input type="text" on:keyup={handleClear} bind:value={currentTodo} />
+  <input
+    type="text"
+    on:keyup={handleClear}
+    bind:value
+    placeholder="What to do?"
+    aria-label="Add a new to-do"
+  />
   <button type="submit">Add Todo</button>
 </form>
 

@@ -1,15 +1,14 @@
 <script>
-  export let todos;
-
-  const toggleCompleted = (todo) => {};
+  import { todos } from "../stores";
+  import TodoItem from "./TodoItem.svelte";
 </script>
 
-{#if !todos.length}
+{#if !$todos.length}
   <p>No Todos Found!</p>
 {:else}
   <ul>
-    {#each todos as { id, title }}
-      <li {id}>{title}</li>
+    {#each $todos as todo}
+      <TodoItem {...todo} id={todo.id} />
     {/each}
   </ul>
 {/if}
@@ -21,6 +20,6 @@
   }
   p,
   ul {
-    margin-top: 4rem;
+    margin-top: 2rem;
   }
 </style>
