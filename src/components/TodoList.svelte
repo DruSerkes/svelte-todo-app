@@ -6,8 +6,8 @@
   <p>No Todos Found!</p>
 {:else}
   <ul>
-    {#each todos as todo}
-      <li id={todo.id}>{todo.title}</li>
+    {#each todos as { id, title }}
+      <li {id}>{title}</li>
     {/each}
   </ul>
 {/if}
