@@ -8,7 +8,9 @@
     addTodo(currentTodo);
     currentTodo = "";
   };
-  const handleClear = (e) => if (e.key === "Escape") currentTodo = "";
+  const handleClear = (e) => {
+    if (e.key === "Escape") currentTodo = "";
+  };
 </script>
 
 <form on:submit|preventDefault={handleSubmit}>
