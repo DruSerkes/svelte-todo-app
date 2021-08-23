@@ -3,10 +3,18 @@
 </script>
 
 {#if !todos.length}
-  <p>Loading Your Todos...</p>
+  <p>No Todos!</p>
+{:else}
+  <ul>
+    {#each todos as todo}
+      <li id={todo.id}>{todo.title}</li>
+    {/each}
+  </ul>
 {/if}
-<ul>
-  {#each todos as todo}
-    <li id={todo.id}>{todo.title}</li>
-  {/each}
-</ul>
+
+<style>
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+</style>
