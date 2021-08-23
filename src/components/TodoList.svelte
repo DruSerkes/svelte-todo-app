@@ -3,7 +3,7 @@
 </script>
 
 {#if !todos.length}
-  <p>No Todos!</p>
+  <p>No Todos Found!</p>
 {:else}
   <ul>
     {#each todos as todo}
@@ -16,5 +16,9 @@
   ul {
     list-style-type: none;
     padding: 0;
+  }
+  p,
+  ul {
+    margin-top: 4rem;
   }
 </style>
