@@ -32,5 +32,6 @@
   button:hover {
     background-color: darkblue;
     color: whitesmoke;
+    cursor: pointer;
   }
 </style>

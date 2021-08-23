@@ -1,5 +1,7 @@
 <script>
   export let todos;
+
+  const toggleCompleted = (todo) => {};
 </script>
 
 {#if !todos.length}
